@@ -1,0 +1,10 @@
+{
+    "outputs": [
+        "def sum_numbers(a, b): return a+b",
+        "def check_even(number): return number % 2 == 0",
+        "def reverse_string(s): return s[::-1]",
+        "def factorial(n): return 1 if n == 0 else n * factorial(n-1)",
+        "def find_max(numbers): return max(numbers)",
+        "def check_palindrome(s): return s == s[::-1]"
+    ]
+}

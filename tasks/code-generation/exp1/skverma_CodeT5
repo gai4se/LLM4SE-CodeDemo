@@ -1,0 +1,37 @@
+from transformers import RobertaTokenizer, T5ForConditionalGeneration
+
+tokenizer = RobertaTokenizer.from_pretrained('Salesforce/codet5-base')
+model = T5ForConditionalGeneration.from_pretrained('Salesforce/codet5-base')
+
+prompts = [
+    "def sum_numbers(a, b):",
+    "def check_even(number):",
+    "def reverse_string(s):",
+    "def factorial(n):",
+    "def find_max(numbers):",
+    "Write a Python function named check_palindrome that takes a string s as an argument and returns True if s is a palindrome, False otherwise.",
+]
+for prompt in prompts:
+    input_ids = tokenizer(prompt, return_tensors="pt", add_special_tokens=True).input_ids
+    generated_ids = model.generate(input_ids, max_length=50)  # Adjust max_length as needed
+    print(f"Prompt: {prompt}")
+    print(f"Completion: {tokenizer.decode(generated_ids[0], skip_special_tokens=True)}\n")
+
+# Output: 
+# Prompt: def sum_numbers(a, b):
+# Completion: def sum_numbers(a, b): return a+b
+
+# Prompt: def check_even(number):
+# Completion: check_even ( number ) 
+
+# Prompt: def reverse_string(s):
+# Completion: return s. reverse 
+
+# Prompt: def factorial(n):
+# Completion: def factorial(n): return n/n} 
+
+# Prompt: def find_max(numbers):
+# Completion: def find_max_by_number ( numbers )
+
+# Prompt: Write a Python function named check_palindrome that takes a string s as an argument and returns True if s is a palindrome, False otherwise.
+# Completion: Check palindromeCheck palindromes)) ; returncheck_palindrome

@@ -1,0 +1,10 @@
+{
+    "outputs": [
+        "def sum_numbers(a, b): return a+b",
+        "check_even(number)",
+        "return s.reverse",
+        "def factorial(n): return n/n}",
+        "def find_max_by_number(numbers)",
+        "Check palindromeCheck palindromes)); returncheck_palindrome"
+    ]
+}
