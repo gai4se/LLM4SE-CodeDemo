@@ -1,0 +1,5 @@
+public boolean isEven(int num){ //Complete return num%2==0; }
+public int sumNumbers(int a, int b){ //Complete    return a + b; //Complete}
+public int findMaximum(int a, int b){ //Complete    if(a>b){ return a;} return b;}
+public int factorial(int num){ //Complete return num! * (num! + 1) // 2 }
+public String reverseString(String input){ //Complete return input[::-1]; }
